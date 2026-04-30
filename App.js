@@ -7,6 +7,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "./src/screens/Home";
 import { createDrawerNavigator } from "@react-navigation/drawer";
+import Register from "./src/screens/Register";
 
 export default function App() {
   const name = "Firas";
@@ -25,6 +26,7 @@ export default function App() {
       <StatusBar style="auto" /> */}
       <NavigationContainer>
         <Drawer.Navigator>
+          <Drawer.Screen name="Register" component={Register} />
           <Drawer.Screen name="Login" component={Login} />
           <Drawer.Screen name="Home" component={Home} />
         </Drawer.Navigator>
